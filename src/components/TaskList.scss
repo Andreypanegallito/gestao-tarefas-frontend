@@ -1,0 +1,114 @@
+#tableTasks {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+
+  thead {
+    tr {
+      th {
+        border: 1px solid #000;
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        border: 1px solid #000;
+        padding-left: 5px;
+      }
+
+      td.id {
+        width: 3%;
+        text-align: center;
+      }
+
+      td.name {
+        width: 40%;
+      }
+
+      td.email {
+        width: 30%;
+      }
+
+      td.data_criacao {
+        width: 15%;
+      }
+
+      td.usuario_ativo {
+        width: 5%;
+        padding: 0;
+
+        span {
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          margin: 5px auto;
+          color: #fff;
+          height: 25px;
+          width: 60px;
+        }
+        span.ativo {
+          background-color: green;
+        }
+
+        span.inativo {
+          background-color: red;
+        }
+      }
+
+      td.opcoes {
+        width: 6%;
+        text-align: center;
+        flex-wrap: wrap;
+
+        button {
+          // width: 50px;
+          margin: 1px 10px 0 10px;
+          background-color: transparent;
+          transition: 0.5s;
+
+          svg {
+            height: 17px;
+            width: 17px;
+          }
+        }
+
+        button:hover {
+          cursor: pointer;
+          transform: scale(1.4);
+          transition: 0.3s;
+        }
+
+        button.delete {
+          transition: background-color 0.5s;
+          background-color: transparent;
+          border-radius: 50%;
+        }
+
+        button.delete:hover {
+          transition: background-color 0.5s;
+          color: red;
+        }
+      }
+
+      td.noUsers {
+        text-align: center;
+        height: 30px;
+      }
+    }
+
+    tr.even {
+      background-color: #f2f2f2;
+    }
+
+    tr.odd {
+      background-color: #fff;
+    }
+
+    tr:hover {
+      background-color: #d1d1d1;
+    }
+  }
+}
